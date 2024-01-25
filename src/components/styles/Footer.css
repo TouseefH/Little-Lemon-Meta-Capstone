@@ -1,0 +1,43 @@
+/* Footer.css */
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    padding: 20px;
+    background-color: #333333;
+    color: #EDEFEE;
+}
+
+.logo-section {
+    grid-column: span 4;
+    /* Spanning 4 columns */
+}
+
+.navigation-section,
+.contact-section,
+.social-media-section {
+    grid-column: span 2;
+    /* Spanning 2 columns each */
+    white-space: nowrap;
+}
+
+
+
+.copyright {
+    grid-column: span 12;
+    /* Spanning all 12 columns, moving to a new row */
+}
+
+/* Adjust styles as needed */
+
+/* Media query for smaller screens */
+@media screen and (max-width: 1024px) {
+
+    .navigation-section,
+    .contact-section,
+    .social-media-section {
+        grid-column: span 12;
+        /* Stack on top of each other */
+
+    }
+}

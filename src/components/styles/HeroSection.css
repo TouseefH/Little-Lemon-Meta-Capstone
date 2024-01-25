@@ -1,0 +1,122 @@
+/* HeroSection.css */
+
+@font-face {
+    font-family: 'Karla';
+    src: url('../fonts/static/Karla-Regular.ttf') format('truetype');
+    /* Adjust the path and format as needed */
+}
+
+/* Custom styles for the header */
+.hero-section-background {
+    padding-top: 10vh;
+    background-color: #495e57;
+    width: 100%;
+    min-height: 350px;
+    /*vai vajag!!!*/
+}
+
+.hero-section-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    padding: 30px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.section-left {
+    grid-column: span 8;
+    /* Takes 8 out of 12 columns on desktop */
+}
+
+.section-left h1 {
+    color: #f4ce14;
+    margin-bottom: -20px;
+}
+
+.section-left h1,
+.section-left h2 {
+    line-height: 0.8;
+    font-family: "Markizi Text";
+    font-weight: medium;
+}
+
+.section-left p {
+    width: 100%;
+}
+
+
+.btn-container a {
+    padding: 15px 35px;
+    font-size: 16pt;
+    font-weight: 600;
+    background-color: #f4ce14;
+    color: #333333;
+    border-radius: 20px;
+    border: none;
+    font-family: 'Karla';
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-container a:hover {
+    cursor: pointer;
+    background-color: #333333;
+    color: #f4ce14;
+    text-decoration: none;
+}
+
+
+.section-right {
+    grid-column: span 4;
+    /* Takes 4 out of 12 columns on desktop */
+    position: relative;
+}
+
+.image-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 370px;
+    border-radius: 10px;
+    position: absolute;
+    overflow: hidden;
+}
+
+.image-box img {
+    width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    .hero-section-container {
+        grid-template-columns: repeat(12, 1fr);
+        /* Reset columns for tablet */
+    }
+
+    .section-left {
+        grid-column: span 12;
+        /* Takes all 12 columns on tablet */
+    }
+
+    .section-right {
+        grid-column: span 12;
+        /* Takes all 12 columns on tablet */
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+    .image-box {
+        right: 0;
+        height: 250px;
+        position: initial;
+    }
+}
+
+@media screen and (max-width: 659px) {
+    .hero-section-container {
+        grid-template-columns: repeat(4, 1fr);
+        /* Change to 4 columns for mobile */
+    }
+}

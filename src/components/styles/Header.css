@@ -1,0 +1,103 @@
+/* Header.css */
+
+@font-face {
+    font-family: 'Karla';
+    src: url('../fonts/static/Karla-Regular.ttf') format('truetype');
+    /* Adjust the path and format as needed */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #EDEFEE;
+    padding: 10px 0;
+    margin: 0 auto;
+
+}
+
+.logo img {
+    padding-left: 20px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center items horizontally */
+}
+
+header nav>ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+
+}
+
+header nav>ul>li {
+    margin: 0 10px;
+    color: #333333;
+    font-family: "Karla";
+    font-weight: medium;
+}
+
+.hamburger-menu {
+    visibility: hidden;
+    /* Hide hamburger-menu */
+}
+
+/*@media screen and (max-width: 1024px) {}*/
+
+
+
+
+@media screen and (max-width: 1024px) {
+
+    header {
+        justify-content: space-between;
+        /* Updated to space-between to separate the logo and hamburger */
+    }
+
+    nav {
+        display: none;
+        /* Hide the regular navigation */
+    }
+
+    .hamburger-menu {
+        visibility: visible;
+        cursor: pointer;
+    }
+
+    nav.open {
+        display: flex;
+        /* Show the navigation when the menu is open */
+        flex-direction: column;
+        position: fixed;
+        top: 60px;
+        /* Adjust as needed */
+        right: 0;
+        background-color: #f4ce14;
+        z-index: 1000;
+        /* Set a high z-index to ensure it appears on top */
+        border-radius: 10px;
+        font-family: 'Karla';
+        font-weight: bold;
+    }
+
+    nav.open ul {
+        flex-direction: column;
+        /* Ensure each list item is on its own line */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: right;
+    }
+
+    nav.open li {
+        margin: 10px;
+        text-align: right;
+
+    }
+
+}
